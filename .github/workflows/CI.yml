@@ -1,1 +1,27 @@
+name: CI Workflow
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-html-css:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Check HTML syntax
+      run: |
+        sudo apt-get install -y tidy
+        tidy -e index.html
+
+    - name: Check CSS syntax
+      run: |
+        sudo apt-get install -y csslint
+        csslint style.css
