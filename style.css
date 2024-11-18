@@ -17,3 +17,16 @@ video {
     width: 300px;   /* Set fixed width */
     height: 400px;  /* Set fixed height */
 }
+.text{
+    text-align: center;
+}
+.text h4{
+    color: #fdfdfd;
+    font-size: 25px;
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff;
+
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+}
